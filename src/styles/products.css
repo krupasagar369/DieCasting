@@ -1,0 +1,187 @@
+/* Products page (new). Scoped like the other page sheets. */
+:where(.page-products) .products-banner {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 90px 0 80px;
+  border-bottom: 4px solid #ff6600;
+}
+:where(.page-products) .products-banner h1 {
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+:where(.page-products) .products-banner h1 span,
+:where(.page-products) .products-banner .crumbs span {
+  color: #ff6600;
+}
+:where(.page-products) .products-banner p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+:where(.page-products) .products-banner .crumbs a {
+  color: #fff;
+  text-decoration: none;
+}
+:where(.page-products) .products-intro {
+  background: #fff;
+  text-align: center;
+  padding: 60px 0 20px;
+}
+:where(.page-products) .products-intro h2 {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+:where(.page-products) .products-intro p {
+  max-width: 720px;
+  margin: 12px auto 0;
+  color: #666;
+}
+:where(.page-products) .products-list {
+  background: #fff;
+  padding: 30px 0 70px;
+}
+:where(.page-products) .product-group {
+  height: 100%;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+:where(.page-products) .product-group:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 102, 0, 0.25);
+}
+:where(.page-products) .product-group-img {
+  position: relative;
+}
+:where(.page-products) .product-group-img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+:where(.page-products) .product-group-badge {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  background: #ff6600;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 30px;
+}
+:where(.page-products) .product-group-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+:where(.page-products) .product-group-body p {
+  color: #555;
+  font-size: 0.92rem;
+}
+:where(.page-products) .product-group-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+:where(.page-products) .product-group-body li {
+  font-size: 0.9rem;
+  color: #333;
+  padding: 3px 0;
+}
+:where(.page-products) .product-group-body li i {
+  color: #ff6600;
+  margin-right: 6px;
+}
+:where(.page-products) .product-group-link {
+  margin-top: auto;
+  color: #ff6600;
+  font-weight: 600;
+  text-decoration: none;
+}
+:where(.page-products) .products-strengths {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 80px 0;
+}
+:where(.page-products) .products-strengths h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-bottom: 28px;
+}
+:where(.page-products) .strength-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+:where(.page-products) .strength-item h5 {
+  margin: 0;
+  font-weight: 600;
+}
+:where(.page-products) .strength-item p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+:where(.page-products) .strength-icon {
+  flex: 0 0 auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+:where(.page-products) .strength-icon-lg {
+  width: 110px;
+  height: 110px;
+  font-size: 2.8rem;
+}
+:where(.page-products) .strength-link {
+  display: inline-block;
+  margin-top: 12px;
+  background: #fff;
+  color: #0d346e;
+  font-size: 0.85rem;
+  padding: 4px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+:where(.page-products) .products-cta {
+  background: #ff6600;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+:where(.page-products) .products-cta h2 {
+  font-weight: 700;
+}
+:where(.page-products) .products-cta-btn {
+  display: inline-block;
+  margin-top: 14px;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 14px 34px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  :where(.page-products) .products-strengths {
+    background-attachment: scroll;
+  }
+}

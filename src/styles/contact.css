@@ -1,0 +1,305 @@
+/* Scoped copy of original contact.css (see scripts/scope-css.mjs) */
+/* Reset and Base Styles */
+:where(.page-contact) * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:where(.page-contact) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Contact Banner Section */
+:where(.page-contact) .contact-banner {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23222" width="1200" height="400"/><path fill="%23333" d="M0 200 Q300 150 600 200 T1200 200 V400 H0 Z"/></svg>');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+:where(.page-contact) .banner-overlay {
+    z-index: 1;
+    color: white;
+    padding: 20px;
+}
+
+:where(.page-contact) .banner-overlay h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+:where(.page-contact) .banner-overlay p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+:where(.page-contact) .contact-section {
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+}
+
+:where(.page-contact) .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+:where(.page-contact) .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+:where(.page-contact) .section-header h2 {
+    font-size: 2.5rem;
+    color: #5a4a3a;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+:where(.page-contact) .section-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+:where(.page-contact) .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Contact Form Section */
+:where(.page-contact) .contact-form-container {
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+:where(.page-contact) .contact-form-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 600;
+}
+
+:where(.page-contact) .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+:where(.page-contact) .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+:where(.page-contact) .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+:where(.page-contact) .form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+:where(.page-contact) .form-group input,
+:where(.page-contact) .form-group textarea {
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background-color: #fafafa;
+}
+
+:where(.page-contact) .form-group input:focus,
+:where(.page-contact) .form-group textarea:focus {
+    outline: none;
+    border-color: #ff6600;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.1);
+}
+
+:where(.page-contact) .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+:where(.page-contact) .char-count {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 5px;
+    text-align: right;
+}
+
+:where(.page-contact) .submit-btn {
+    background: #6d5d4b;
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+:where(.page-contact) .submit-btn:hover {
+    background: #5a4a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(109, 93, 75, 0.3);
+}
+
+:where(.page-contact) .submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Contact Info Cards */
+:where(.page-contact) .contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+:where(.page-contact) .info-card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+:where(.page-contact) .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+:where(.page-contact) .info-icon {
+    width: 60px;
+    height: 60px;
+    background: #6d5d4b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+:where(.page-contact) .info-icon svg {
+    color: white;
+}
+
+:where(.page-contact) .info-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+:where(.page-contact) .info-card p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+:where(.page-contact) .info-card p:last-child {
+    margin-bottom: 0;
+}
+
+:where(.page-contact) .info-card strong {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    :where(.page-contact) .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    :where(.page-contact) .banner-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    :where(.page-contact) .banner-overlay p {
+        font-size: 1rem;
+    }
+
+    :where(.page-contact) .contact-banner {
+        height: 300px;
+    }
+
+    :where(.page-contact) .contact-section {
+        padding: 50px 20px;
+    }
+
+    :where(.page-contact) .contact-form-container {
+        padding: 40px 30px;
+    }
+
+    :where(.page-contact) .section-header h2 {
+        font-size: 2rem;
+    }
+
+    :where(.page-contact) .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    :where(.page-contact) .banner-overlay h1 {
+        font-size: 2rem;
+    }
+
+    :where(.page-contact) .contact-form-container {
+        padding: 30px 20px;
+    }
+
+    :where(.page-contact) .contact-form-container h3 {
+        font-size: 1.5rem;
+    }
+
+    :where(.page-contact) .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    :where(.page-contact) .section-header p {
+        font-size: 1rem;
+    }
+
+    :where(.page-contact) .info-card {
+        padding: 25px;
+    }
+
+    :where(.page-contact) .submit-btn {
+        padding: 16px 30px;
+        font-size: 0.9rem;
+    }
+}

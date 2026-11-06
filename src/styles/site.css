@@ -1,0 +1,2055 @@
+/* Scoped copy of original style.css (see scripts/scope-css.mjs) */
+/* Import Google Fonts */
+
+/* CSS Variables */
+:where(.site) {
+    --primary-color: #ff6600;
+    --secondary-color: #1a1a1a;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+    --dark: #0d0d0d;
+    --orange-light: #ff7722;
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+:where(.site) * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:where(.site) {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+:where(.site) {
+    scroll-behavior: smooth;
+}
+
+/* Top Bar */
+:where(.site) .top-bar {
+    background-color: var(--dark);
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 2px solid var(--primary-color);
+    height: 50px;
+}
+
+:where(.site) .top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+:where(.site) .contact-info {
+    display: flex;
+    gap: 30px;
+}
+
+:where(.site) .top-link {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+:where(.site) .top-link:hover {
+    color: var(--primary-color);
+}
+
+:where(.site) .top-link i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+:where(.site) .social-links {
+    display: flex;
+    gap: 15px;
+}
+
+:where(.site) .social-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 102, 0, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+:where(.site) .social-icon:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Navbar */
+/* /* Reset and Base Styles */
+:where(.site) * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:where(.site) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+}
+
+/* Navbar Styles */
+:where(.site) .navbar {
+    background-color: #fffdfd;
+    padding: 1rem 2rem;
+    /* position: fixed; */
+/* top: 2px;
+left: 0; */
+width: 100%;
+z-index: 1000;
+height: 105px;
+}
+
+/* Brand Styles */
+:where(.site) .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+}
+
+:where(.site) .brand-icon {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+:where(.site) .brand-text {
+    color: #D98A00;
+}
+
+/* Navigation Links */
+:where(.site) .navbar-nav {
+    align-items: center;
+    gap: 1rem;
+}
+:where(.site) .QUT{
+    color: #f5f5f5;
+    font-size: 10px;
+}
+:where(.site) .nav-link {
+    color: #000000 !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+:where(.site) .nav-link:hover {
+    color: #ff5722 !important;
+}
+
+:where(.site) .nav-link.dropdown-toggle::after {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+:where(.site) .navbar-toggler {
+    border: 1px solid black; /* black border */
+}
+
+:where(.site) .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/* Dropdown Menu */
+:where(.site) .dropdown-menu {
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(64, 64, 64, 0.15);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    min-width: 280px;
+}
+
+:where(.site) .dropdown-item {
+    color: #1a1a1a;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.2s ease;
+}
+
+:where(.site) .dropdown-item:hover {
+    background-color: #fbebd8;
+    color: #1a1a1a;
+}
+
+:where(.site) .item-desc {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #666666;
+    margin-top: 0.25rem;
+}
+
+/* Get Quote Button */
+:where(.site) .btn-quote {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 0.625rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-left: 1rem;
+}
+
+:where(.site) .btn-quote:hover {
+    background-color: #e64a19;
+    color: #ffffff;
+}
+/* ========================================================== */
+/* logoo */
+/* Navbar Brand Styling */
+:where(.site) .navbar-brand {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    gap: 5px; /* Space between logo and text */
+    text-decoration: none;
+}
+
+:where(.site) .company-logo {
+    width: 100px; /* Default logo size */
+    height: auto;
+}
+:where(.site) .companyfl{
+    width: 70px; /* Default logo size */
+    height: auto; 
+}
+:where(.site) .brand-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+:where(.site) .brand-text {
+    font-weight: 900;
+    font-size: 25px;
+    color: #D98A00; /* Adjust to match your navbar background */
+}
+
+:where(.site) .QUT {
+    font-size: 12px;
+    font-weight: 600;
+    color: #D98A00;
+    margin: 0;
+    text-align: center;
+}
+:where(.site) .gre {
+     font-size: 8px;
+    font-weight: 600;
+    color: #135838;
+    margin: 0;
+   font-size: small;
+   letter-spacing: 1.2px;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 760px) {
+    :where(.site) .navbar-brand {
+        flex-direction: row; /* keep side by side */
+        align-items: center;
+        gap: 6px; /* small space between logo and text */
+    }
+
+    :where(.site) .company-logo {
+        width: 55px; /* smaller logo */
+        height: auto;
+    }
+
+     :where(.site) .brand-text {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    :where(.site) .QUT {
+        font-size: 8px;
+        text-align: center;
+    }
+
+    :where(.site) .gre {
+        font-size: 8px;
+         text-align: center;
+    }
+}
+
+
+@media (max-width: 425px) {
+    :where(.site) .navbar-brand {
+        flex-direction: row; /* keep side by side */
+        align-items: center;
+        gap: 6px; /* small space between logo and text */
+    }
+
+    :where(.site) .company-logo {
+        width: 55px; /* smaller logo */
+        height: auto;
+    }
+
+     :where(.site) .brand-text {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    :where(.site) .QUT {
+        font-size: 8px;
+        text-align: center;
+    }
+
+    :where(.site) .gre {
+        font-size: 8px;
+         text-align: center;
+    }
+    :where(.site) .dropdown-menu {
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(64, 64, 64, 0.15);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    min-width: 280px;
+}
+}
+
+@media (max-width: 320px) {
+    :where(.site) .navbar-brand {
+        flex-direction: row; /* still side by side */
+        align-items: center;
+        gap: 5px;
+    }
+
+    :where(.site) .company-logo {
+        width: 40px;
+        height: auto;
+    }
+
+    :where(.site) .brand-text {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    :where(.site) .QUT {
+        font-size: 8px;
+        text-align: center;
+    }
+
+    :where(.site) .gre {
+        font-size: 8px;
+         text-align: center;
+    }
+}
+
+
+/* looooooogoooo */
+
+/* Responsive Styles */
+@media (max-width: 425px) {
+    :where(.site) .navbar-nav {
+        margin-top: 1rem;
+    }
+    
+    :where(.site) .btn-quote {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        display: inline-block;
+    }
+    
+    :where(.site) .dropdown-menu {
+        background-color: #2a2a2a;
+    }
+    
+    :where(.site) .dropdown-item {
+        color: #ffffff;
+    }
+    
+    :where(.site) .dropdown-item:hover {
+        background-color: #333333;
+        color: #ff5722;
+    }
+    
+    :where(.site) .item-desc {
+        color: #999999;
+    }
+}
+/* Hero Carousel */
+:where(.site) .hero-section {
+    position: relative;
+}
+
+:where(.site) .carousel-item {
+    height: 100vh;
+    min-height: 600px;
+}
+
+:where(.site) .carousel-img-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+:where(.site) .carousel-img-wrapper img {
+    object-fit: cover;
+    height: 100%;
+}
+
+:where(.site) .carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.721) 0%, rgba(182, 176, 176, 0.162) 100%); */ 
+}
+
+:where(.site) .carousel-caption-custom {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+:where(.site) .carousel-caption-custom h1 {
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+/* Logo Styling */
+:where(.site) .carousel-logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 10;
+}
+
+:where(.site) .carousel-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    /* border: 3px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); */
+}
+
+:where(.site) .text-orange {
+    color: var(--primary-color);
+}
+
+:where(.site) .carousel-caption-custom .lead {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+:where(.site) .btn-primary {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+:where(.site) .btn-primary:hover {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 102, 0, 0.4);
+}
+
+:where(.site) .btn-outline-light {
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+:where(.site) .btn-outline-light:hover {
+    background-color: var(--white);
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+:where(.site) .carousel-control-prev,
+:where(.site) .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 102, 0, 0.8);
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+:where(.site) .carousel-control-prev {
+    left: 30px;
+}
+
+:where(.site) .carousel-control-next {
+    right: 30px;
+}
+
+:where(.site) .carousel-control-prev:hover,
+:where(.site) .carousel-control-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+:where(.site) .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+:where(.site) .carousel-indicators button.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    width: 40px;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeInDown-site {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp-site {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+:where(.site) .animate-slide-up {
+    animation: fadeInUp-site 0.8s ease;
+}
+
+:where(.site) .animate-slide-up-delay {
+    animation: fadeInUp-site 1s ease 0.2s backwards;
+}
+
+:where(.site) .animate-slide-up-delay-2 {
+    animation: fadeInUp-site 1.2s ease 0.4s backwards;
+}
+
+:where(.site) .fade-in {
+    opacity: 0;
+    animation: fadeInUp-site 0.8s ease forwards;
+}
+
+:where(.site) .fade-in-delay {
+    opacity: 0;
+    animation: fadeInUp-site 1s ease 0.2s forwards;
+}
+
+:where(.site) .fade-in-delay-2 {
+    opacity: 0;
+    animation: fadeInUp-site 1.2s ease 0.4s forwards;
+}
+
+/* About Section */
+:where(.site) .about-section {
+    background-color: var(--light-gray);
+}
+
+:where(.site) .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    position: relative;
+    display: inline-block;
+}
+
+:where(.site) .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+:where(.site) .stat-card {
+    background-color: var(--white);
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+:where(.site) .stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 102, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+:where(.site) .stat-icon {
+    font-size: 3.0rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+:where(.site) .stat-card:hover .stat-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+:where(.site) .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+:where(.site) .stat-label {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Industries Section */
+:where(.site) .industries-section {
+    background-color: var(--white);
+}
+
+:where(.site) .industry-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+:where(.site) .industry-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.1), transparent);
+    transition: var(--transition);
+}
+
+:where(.site) .industry-card:hover::before {
+    left: 100%;
+}
+
+:where(.site) .industry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+:where(.site) .industry-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+:where(.site) .industry-card:hover .industry-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+:where(.site) .industry-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+:where(.site) .industry-description {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+:where(.site) .industry-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+:where(.site) .industry-link:hover {
+    background-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Why Choose Us Section */
+:where(.site) .why-choose-section {
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+:where(.site) .why-choose-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 102, 0, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+:where(.site) .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+:where(.site) .feature-item:hover {
+    background-color: rgba(255, 102, 0, 0.1);
+    border-color: var(--primary-color);
+    transform: translateX(10px);
+}
+
+:where(.site) .feature-icon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+:where(.site) .feature-item:hover .feature-icon {
+    transform: scale(1.2);
+}
+
+:where(.site) .feature-title {
+    color: var(--white);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* CTA Section */
+:where(.site) .cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--orange-light) 100%);
+}
+
+:where(.site) .btn-dark {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 12px 35px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+:where(.site) .btn-dark:hover {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+:where(.site) .footer {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+:where(.site) .footer-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    padding-left: 25px;
+}
+
+:where(.site) .footer-text {
+    color: #999;
+    line-height: 1.8;
+    padding-left: 5px;
+}
+
+:where(.site) .footer-links {
+    list-style: none;
+    padding-left: 25px;
+}
+
+:where(.site) .footer-links li {
+    margin-bottom: 12px;
+}
+
+:where(.site) .footer-links a {
+    color: #999;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+:where(.site) .footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+:where(.site) .footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+:where(.site) .footer-contact li {
+    color: #999;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+:where(.site) .footer-contact i {
+    color: var(--primary-color);
+    margin-top: 3px;
+}
+
+:where(.site) .social-links-footer {
+    display: flex;
+    gap: 15px;
+}
+
+:where(.site) .social-icon-footer {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 102, 0, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+:where(.site) .social-icon-footer:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-5px);
+}
+
+:where(.site) .footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+:where(.site) .footer-copyright {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+:where(.site) .footer-copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+:where(.site) .footer-copyright a:hover {
+    color: var(--orange-light);
+}
+
+/* Scroll to Top Button */
+:where(.site) .scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+:where(.site) .scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+:where(.site) .scroll-top-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    :where(.site) .carousel-item {
+        height: 80vh;
+    }
+    
+    :where(.site) .carousel-caption-custom h1 {
+        font-size: 2.5rem;
+    }
+    
+    :where(.site) .carousel-caption-custom .lead {
+        font-size: 1.1rem;
+    }
+    
+    :where(.site) .top-bar-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    :where(.site) .contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    :where(.site) .carousel-control-prev,
+    :where(.site) .carousel-control-next {
+        width: 50px;
+        height: 50px;
+    }
+    
+    :where(.site) .carousel-control-prev {
+        left: 15px;
+    }
+    
+    :where(.site) .carousel-control-next {
+        right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    :where(.site) .section-title {
+        font-size: 2rem;
+    }
+    
+    :where(.site) .stat-number {
+        font-size: 2rem;
+    }
+    
+    :where(.site) .industry-icon {
+        font-size: 3rem;
+    }
+    
+    :where(.site) .carousel-item {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    :where(.site) .carousel-caption-custom h1 {
+        font-size: 2rem;
+    }
+    
+    :where(.site) .carousel-caption-custom .lead {
+        font-size: 1rem;
+    }
+    
+    :where(.site) .btn-primary,
+    :where(.site) .btn-outline-light {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    :where(.site) .carousel-caption-custom h1 {
+        font-size: 1.5rem;
+    }
+    
+    :where(.site) .carousel-caption-custom .lead {
+        font-size: 0.9rem;
+    }
+    
+    :where(.site) .stat-card {
+        padding: 30px 15px;
+    }
+    
+    :where(.site) .industry-card {
+        padding: 30px 20px;
+    }
+    
+    :where(.site) .scroll-top-btn {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+/* Mobile Styles for Top Bar and Navbar */
+
+/* Large Mobile - 425px */
+@media (max-width: 425px) {
+    :where(.site) .top-bar {
+        padding: 8px 0;
+    }
+
+    :where(.site) .top-bar-content {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    :where(.site) .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    :where(.site) .top-link {
+        font-size: 12px;
+        padding: 4px 0;
+    }
+
+    :where(.site) .top-link i {
+        font-size: 14px;
+    }
+
+    :where(.site) .social-links {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    :where(.site) .social-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    /* Navbar */
+    :where(.site) .navbar {
+        padding: 8px 10px;
+    }
+
+    :where(.site) .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        max-width: 70%;
+    }
+
+    :where(.site) .brand-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    :where(.site) .brand-text {
+        font-size: 11px;
+        letter-spacing: 0.3px;
+        line-height: 1.2;
+    }
+
+    :where(.site) .QUT {
+        font-size: 7px;
+        margin: 0;
+        letter-spacing: 0.2px;
+        line-height: 1.2;
+    }
+
+    :where(.site) .navbar-toggler {
+        padding: 6px 8px;
+        font-size: 18px;
+        border: 1px solid rgba(252, 247, 247, 0.3);
+    }
+
+    :where(.site) .navbar-collapse {
+        margin-top: 10px;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 10px 0;
+        border-radius: 8px;
+    }
+
+    :where(.site) .navbar-nav {
+        margin-top: 0;
+    }
+
+    :where(.site) .nav-link {
+        font-size: 14px;
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    :where(.site) .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+
+    /* Dropdown Styles */
+    :where(.site) .dropdown-menu {
+        background-color: #000 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 13px;
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    :where(.site) .dropdown-item {
+        padding: 12px 25px;
+        white-space: normal;
+        color: #fff !important;
+        background-color: #000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    :where(.site) .dropdown-item:hover,
+    :where(.site) .dropdown-item:focus {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #fff !important;
+    }
+
+    :where(.site) .dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    :where(.site) .item-desc {
+        display: block;
+        font-size: 10px;
+        margin-top: 4px;
+        opacity: 0.7;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    :where(.site) .dropdown-toggle::after {
+        margin-left: 8px;
+    }
+
+    /* Container padding */
+    :where(.site) .container,
+    :where(.site) .container-fluid {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Better scrolling for navbar */
+    :where(.site) .navbar-collapse {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    /* Better touch targets */
+    :where(.site) .nav-link,
+    :where(.site) .dropdown-item,
+    :where(.site) .top-link,
+    :where(.site) .social-icon {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Medium Mobile - 375px */
+@media (max-width: 375px) {
+    :where(.site) .top-bar {
+        padding: 6px 0;
+    }
+
+    :where(.site) .top-link {
+        font-size: 11px;
+    }
+
+    :where(.site) .top-link i {
+        font-size: 12px;
+    }
+
+    :where(.site) .social-links {
+        gap: 10px;
+    }
+
+    :where(.site) .social-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+
+    /* Navbar */
+    :where(.site) .navbar {
+        padding: 8px 12px;
+    }
+
+    :where(.site) .navbar-brand {
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    :where(.site) .brand-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    :where(.site) .brand-text {
+        font-size: 12px;
+        letter-spacing: 0.3px;
+    }
+
+    :where(.site) .QUT {
+        font-size: 7px;
+        letter-spacing: 0.2px;
+    }
+
+    :where(.site) .navbar-toggler {
+        padding: 5px 7px;
+        font-size: 16px;
+    }
+
+    :where(.site) .nav-link {
+        font-size: 13px;
+        padding: 9px 12px;
+    }
+
+    :where(.site) .dropdown-menu {
+        font-size: 12px;
+    }
+
+    :where(.site) .dropdown-item {
+        padding: 9px 12px;
+    }
+
+    :where(.site) .item-desc {
+        font-size: 10px;
+    }
+}
+
+/* Small Mobile - 320px */
+@media (max-width: 320px) {
+    :where(.site) .top-bar {
+        padding: 5px 0;
+    }
+
+    :where(.site) .contact-info {
+        gap: 6px;
+    }
+
+    :where(.site) .top-link {
+        font-size: 10px;
+        padding: 3px 0;
+    }
+
+    :where(.site) .top-link i {
+        font-size: 11px;
+        margin-right: 3px;
+    }
+
+    :where(.site) .social-links {
+        gap: 8px;
+    }
+
+    :where(.site) .social-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+    }
+
+    /* Navbar */
+    :where(.site) .navbar {
+        padding: 6px 10px;
+    }
+
+    :where(.site) .navbar-brand {
+        gap: 5px;
+        font-size: 11px;
+    }
+
+    :where(.site) .brand-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    :where(.site) .brand-text {
+        font-size: 10px;
+        letter-spacing: 0.2px;
+    }
+
+    :where(.site) .QUT {
+        font-size: 6px;
+        letter-spacing: 0.1px;
+    }
+
+    :where(.site) .navbar-toggler {
+        padding: 4px 6px;
+        font-size: 14px;
+    }
+
+    :where(.site) .nav-link {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    :where(.site) .dropdown-menu {
+        font-size: 11px;
+    }
+
+    :where(.site) .dropdown-item {
+        padding: 8px 10px;
+    }
+
+    :where(.site) .item-desc {
+        font-size: 9px;
+        margin-top: 2px;
+    }
+
+    :where(.site) .dropdown-toggle::after {
+        font-size: 10px;
+    }
+}
+
+/* Additional helper styles for better mobile experience */
+
+@media (max-width: 425px) {
+    :where(.site) .container,
+    :where(.site) .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Ensure dropdown is full width on mobile */
+    :where(.site) .navbar-collapse {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    /* Better touch targets */
+    :where(.site) .nav-link,
+    :where(.site) .dropdown-item,
+    :where(.site) .top-link,
+    :where(.site) .social-icon {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Smooth transitions */
+    :where(.site) .navbar-collapse {
+        transition: all 0.3s ease-in-out;
+    }
+}
+/* Mobile Styles for Top Bar and Navbar */
+
+/* Large Mobile - 425px */
+@media (max-width: 425px) {
+      :where(.site) .top-bar {
+        padding: 8px 0;
+        height: auto;
+    }
+
+    :where(.site) .top-bar-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    :where(.site) .contact-info {
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+    }
+
+    :where(.site) .top-link {
+        font-size: 11px;
+        padding: 4px 0;
+    }
+
+    :where(.site) .top-link i {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    :where(.site) .social-links {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    :where(.site) .social-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+
+    /* Navbar */
+    :where(.site) .navbar {
+        padding: 10px 15px;
+        height: auto;
+    }
+
+    :where(.site) .navbar-brand {
+        font-size: 1.1rem;
+        gap: 8px;
+    }
+
+    :where(.site) .brand-icon {
+        padding: 0.4rem 0.6rem;
+        font-size: 1rem;
+    }
+
+    :where(.site) .brand-text {
+        font-size: 0.9rem;
+    }
+
+    :where(.site) .QUT {
+        font-size: 8px;
+    }
+
+    :where(.site) .navbar-toggler {
+        padding: 8px 10px;
+        font-size: 1.2rem;
+        border: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    :where(.site) .navbar-collapse {
+        margin-top: 15px;
+    }
+
+    :where(.site) .navbar-nav {
+        margin-top: 0;
+    }
+
+    :where(.site) .nav-link {
+        font-size: 0.95rem !important;
+        padding: 12px 15px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    :where(.site) .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+
+    /* Dropdown - Black Background */
+    :where(.site) .dropdown-menu {
+        background-color: #000000 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    :where(.site) .dropdown-item {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        color: #ffffff !important;
+        background-color: #000000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    :where(.site) .dropdown-item:hover,
+    :where(.site) .dropdown-item:focus {
+        background-color: rgba(255, 87, 34, 0.2) !important;
+        color: #ffffff !important;
+    }
+
+    :where(.site) .dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    :where(.site) .item-desc {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 4px;
+    }
+
+    :where(.site) .btn-quote {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 90%;
+        text-align: center;
+        display: block;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Container adjustments */
+    :where(.site) .container,
+    :where(.site) .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Better scrolling */
+    :where(.site) .navbar-collapse {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    /* Touch targets */
+    :where(.site) .nav-link,
+    :where(.site) .dropdown-item {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Medium Mobile - 375px */
+@media (max-width: 375px) {
+    /* Top Bar */
+    :where(.site) .top-bar {
+        padding: 6px 0;
+    }
+
+    :where(.site) .top-bar-content {
+        gap: 6px;
+    }
+
+    :where(.site) .contact-info {
+        gap: 5px;
+    }
+
+    :where(.site) .top-link {
+        font-size: 10px;
+        padding: 3px 0;
+    }
+
+    :where(.site) .top-link i {
+        font-size: 11px;
+        margin-right: 4px;
+    }
+
+    :where(.site) .social-links {
+        gap: 8px;
+    }
+
+    :where(.site) .social-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+    }
+
+    /* Navbar */
+    :where(.site) .navbar {
+        padding: 8px 12px;
+    }
+
+    :where(.site) .navbar-brand {
+        font-size: 1rem;
+        gap: 6px;
+    }
+
+    :where(.site) .brand-icon {
+        padding: 0.35rem 0.55rem;
+        font-size: 0.9rem;
+    }
+
+    :where(.site) .brand-text {
+        font-size: 0.85rem;
+    }
+
+    :where(.site) .QUT {
+        font-size: 7px;
+    }
+
+    :where(.site) .navbar-toggler {
+        padding: 6px 8px;
+        font-size: 1.1rem;
+    }
+
+    :where(.site) .nav-link {
+        font-size: 0.9rem !important;
+        padding: 10px 12px !important;
+    }
+
+    /* Dropdown - Black Background */
+    :where(.site) .dropdown-menu {
+        background-color: #000000 !important;
+    }
+
+    :where(.site) .dropdown-item {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+        background-color: #d1c7c7;
+    }
+
+    :where(.site) .dropdown-item:hover,
+    :where(.site) .dropdown-item:focus {
+        background-color: rgba(255, 87, 34, 0.2) !important;
+    }
+
+    :where(.site) .item-desc {
+        font-size: 0.7rem;
+    }
+
+    :where(.site) .btn-quote {
+        padding: 9px 18px;
+        font-size: 0.85rem;
+    }
+}
+@media screen and (max-width: 760px) {
+    :where(.site) .top-bar-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    :where(.site) .contact-info {
+        gap: 4px;
+    }
+
+    :where(.site) .top-link {
+        font-size: 9px;
+        padding: 2px 0;
+    }
+
+    :where(.site) .top-link i {
+        font-size: 10px;
+        margin-right: 3px;
+    }
+
+    :where(.site) .social-links {
+        gap: 6px;
+    }
+
+    :where(.site) .social-icon {
+        width: 22px;
+        height: 22px;
+        font-size: 9px;
+    }
+}
+
+
+/* Small Mobile - 320px */
+@media (max-width: 375px){
+    /* Top Bar */
+   :where(.site) .top-bar-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    :where(.site) .contact-info {
+        gap: 4px;
+    }
+
+    :where(.site) .top-link {
+        font-size: 9px;
+        padding: 2px 0;
+    }
+
+    :where(.site) .top-link i {
+        font-size: 10px;
+        margin-right: 3px;
+    }
+
+    :where(.site) .social-links {
+        gap: 6px;
+    }
+
+    :where(.site) .social-icon {
+        width: 22px;
+        height: 22px;
+        font-size: 9px;
+    }
+
+    /* Navbar */
+    :where(.site) .navbar {
+        padding: 6px 10px;
+    }
+
+    :where(.site) .navbar-brand {
+        font-size: 0.9rem;
+        gap: 5px;
+    }
+
+    :where(.site) .brand-icon {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    :where(.site) .brand-text {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+
+    :where(.site) .QUT {
+        font-size: 6px;
+    }
+
+    :where(.site) .navbar-toggler {
+        padding: 5px 7px;
+        font-size: 1rem;
+    }
+
+    :where(.site) .navbar-collapse {
+        margin-top: 10px;
+    }
+
+    :where(.site) .nav-link {
+        font-size: 0.85rem !important;
+        padding: 9px 10px !important;
+    }
+
+    /* Dropdown - Black Background */
+    :where(.site) .dropdown-menu {
+        background-color: #000000 !important;
+        font-size: 0.8rem;
+    }
+
+    :where(.site) .dropdown-item {
+        padding: 9px 12px;
+        font-size: 0.8rem;
+        background-color: #000000;
+    }
+
+    :where(.site) .dropdown-item:hover,
+    :where(.site) .dropdown-item:focus {
+        background-color: rgba(255, 87, 34, 0.2) !important;
+    }
+
+    :where(.site) .item-desc {
+        font-size: 0.65rem;
+        margin-top: 3px;
+    }
+
+    :where(.site) .btn-quote {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    :where(.site) .dropdown-toggle::after {
+        font-size: 0.7rem;
+        margin-left: 5px;
+    }
+}
+
+/* Additional improvements for all mobile sizes */
+@media (max-width: 425px) {
+    /* Smooth transitions */
+    :where(.site) .navbar-collapse {
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Prevent horizontal scroll */
+    :where(.site) {
+        overflow-x: hidden;
+    }
+
+    /* Better dropdown animation */
+    :where(.site) .dropdown-menu {
+        animation: slideDown-site 0.3s ease;
+    }
+
+    @keyframes slideDown-site {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Improved navbar toggle button */
+    :where(.site) .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.2rem rgba(255, 87, 34, 0.25);
+    }
+
+    /* Better spacing for collapsed navbar */
+    :where(.site) .navbar-collapse.show,
+    :where(.site) .navbar-collapse.collapsing {
+        background-color: rgba(236, 236, 236, 0.98);
+        padding: 10px 0;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+}
+/* Carousel Controls - Tablet View - 720px */
+@media (max-width: 768px) {
+    :where(.site) .carousel-control-prev,
+    :where(.site) .carousel-control-next {
+        width: 45px;
+        height: 45px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 102, 0, 0.8);
+        border-radius: 50%;
+        opacity: 0.8;
+        transition: var(--transition);
+    }
+        :where(.site) .dropdown-menu {
+        background-color: #000000 !important;
+        font-size: 0.8rem;
+    }
+
+    :where(.site) .dropdown-item {
+        padding: 9px 12px;
+        font-size: 0.8rem;
+        background-color: #000000;
+    }
+
+    :where(.site) .carousel-control-prev {
+        left: 20px;
+    }
+
+    :where(.site) .carousel-control-next {
+        right: 20px;
+    }
+
+    :where(.site) .carousel-control-prev:hover,
+    :where(.site) .carousel-control-next:hover {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    :where(.site) .carousel-control-prev-icon,
+    :where(.site) .carousel-control-next-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Carousel Controls - Large Mobile - 425px */
+@media (max-width: 425px) {
+    :where(.site) .carousel-control-prev,
+    :where(.site) .carousel-control-next {
+        width: 38px;
+        height: 38px;
+        background-color: rgba(255, 102, 0, 0.85);
+        border-radius: 50%;
+        opacity: 0.9;
+    }
+
+    :where(.site) .carousel-control-prev {
+        left: 12px;
+    }
+
+    :where(.site) .carousel-control-next {
+        right: 12px;
+    }
+
+    :where(.site) .carousel-control-prev:hover,
+    :where(.site) .carousel-control-next:hover {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.08);
+    }
+
+    :where(.site) .carousel-control-prev-icon,
+    :where(.site) .carousel-control-next-icon {
+        width: 16px;
+        height: 16px;
+        background-size: 16px 16px;
+    }
+
+    /* Reduce carousel height for mobile */
+    :where(.site) .carousel-item {
+        height: 70vh;
+        min-height: 500px;
+    }
+}
+
+/* Carousel Controls - Medium Mobile - 375px */
+@media (max-width: 375px) {
+    :where(.site) .carousel-control-prev,
+    :where(.site) .carousel-control-next {
+        width: 35px;
+        height: 35px;
+        background-color: rgba(255, 102, 0, 0.85);
+    }
+
+    :where(.site) .carousel-control-prev {
+        left: 10px;
+    }
+
+    :where(.site) .carousel-control-next {
+        right: 10px;
+    }
+
+    :where(.site) .carousel-control-prev-icon,
+    :where(.site) .carousel-control-next-icon {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+
+    :where(.site) .carousel-item {
+        height: 65vh;
+        min-height: 450px;
+    }
+}
+
+/* Carousel Controls - Small Mobile - 320px */
+@media (max-width: 320px) {
+    :where(.site) .carousel-control-prev,
+    :where(.site) .carousel-control-next {
+        width: 32px;
+        height: 32px;
+        background-color: rgba(255, 102, 0, 0.9);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    :where(.site) .carousel-control-prev {
+        left: 8px;
+    }
+
+    :where(.site) .carousel-control-next {
+        right: 8px;
+    }
+
+    :where(.site) .carousel-control-prev:hover,
+    :where(.site) .carousel-control-next:hover {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.05);
+    }
+
+    :where(.site) .carousel-control-prev-icon,
+    :where(.site) .carousel-control-next-icon {
+        width: 12px;
+        height: 12px;
+        background-size: 12px 12px;
+    }
+
+    :where(.site) .carousel-item {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    /* Optional: Make indicators smaller on smallest screens */
+    :where(.site) .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+    }
+
+    :where(.site) .carousel-indicators button.active {
+        width: 24px;
+        border-radius: 6px;
+    }
+}
+
+/* Additional improvements for carousel on mobile */
+@media (max-width: 425px) {
+    /* Adjust carousel caption for mobile */
+    :where(.site) .carousel-caption-custom h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    :where(.site) .carousel-caption-custom .lead {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    /* Button adjustments */
+    :where(.site) .carousel-caption-custom .btn-primary,
+    :where(.site) .carousel-caption-custom .btn-outline-light {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        margin: 5px;
+    }
+
+    /* Ensure controls are always visible on mobile */
+    :where(.site) .carousel-control-prev,
+    :where(.site) .carousel-control-next {
+        opacity: 0.85;
+    }
+
+    /* Better touch area */
+    :where(.site) .carousel-control-prev::before,
+    :where(.site) .carousel-control-next::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    :where(.site) .carousel-item {
+        height: 90vh;
+        min-height: 350px;
+    }
+
+    :where(.site) .carousel-control-prev,
+    :where(.site) .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+
+    :where(.site) .carousel-control-prev-icon,
+    :where(.site) .carousel-control-next-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+}

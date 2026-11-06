@@ -1,0 +1,741 @@
+/* Scoped copy of original about.css (see scripts/scope-css.mjs) */
+/* Root Variables */
+:where(.page-about) {
+    --primary-orange: #FF6B35;
+    --dark-orange: #E85D2A;
+    --light-orange: #FF8C5F;
+    --black: #1a1a1a;
+    --dark-gray: #2d2d2d;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --text-gray: #666;
+}
+
+/* General Styles */
+:where(.page-about) * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:where(.page-about) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+:where(.page-about) {
+    scroll-behavior: smooth;
+}
+
+/* Logo Styles */
+:where(.page-about) .logo-img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+:where(.page-about) .brand-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-orange);
+}
+
+/* Hero Section - FIXED */
+:where(.page-about) .hero-section {
+    position: relative;
+    height: 550px;
+    background-image: url('https://wallpapercave.com/wp/wp9489454.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+:where(.page-about) .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(45, 45, 45, 0.4) 100%);
+    z-index: 1;
+}
+
+:where(.page-about) .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    animation: fadeInUp-about 1s ease-out;
+}
+
+:where(.page-about) .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+:where(.page-about) .hero-subtitle {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@keyframes fadeInUp-about {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Styling */
+:where(.page-about) .section-padding {
+    padding: 80px 0;
+}
+
+:where(.page-about) .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+:where(.page-about) .title-underline {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-orange);
+    margin: 0 auto 20px;
+}
+
+:where(.page-about) .section-subtitle {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Company Overview */
+:where(.page-about) .overview-section {
+    background: var(--white);
+}
+
+:where(.page-about) .overview-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+:where(.page-about) .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+:where(.page-about) .stat-card {
+    background: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+:where(.page-about) .stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-orange);
+    box-shadow: 0 10px 30px rgba(255,107,53,0.2);
+}
+
+:where(.page-about) .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-orange);
+    margin-bottom: 10px;
+}
+
+:where(.page-about) .stat-label {
+    font-size: 1rem;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* Mission & Vision */
+:where(.page-about) .mv-section {
+    background: var(--light-gray);
+}
+
+:where(.page-about) .mv-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+:where(.page-about) .mv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255,107,53,0.3);
+    border-color: var(--primary-orange);
+}
+
+:where(.page-about) .mv-icon {
+    font-size: 3rem;
+    color: var(--primary-orange);
+    margin-bottom: 20px;
+}
+
+:where(.page-about) .mv-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+:where(.page-about) .mv-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Portfolio Section */
+:where(.page-about) .portfolio-section {
+    background: var(--white);
+}
+
+:where(.page-about) .portfolio-logo-container {
+    background: var(--black);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+:where(.page-about) .portfolio-logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+:where(.page-about) .portfolio-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+:where(.page-about) .tagline {
+    font-size: 1.3rem;
+    color: var(--primary-orange);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+:where(.page-about) .portfolio-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+:where(.page-about) .sub-section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+:where(.page-about) .sub-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-orange);
+}
+:where(.page-about) .capability-card {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: 0.3s;
+    text-align: center;
+}
+
+:where(.page-about) .capability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+:where(.page-about) .capability-icon {
+    font-size: 40px;
+    color: orange;
+    margin-bottom: 10px;
+}
+/* Capabilities */
+:where(.page-about) .capability-card {
+    background: var(--light-gray);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+:where(.page-about) .capability-card:hover {
+    background: var(--white);
+    transform: translateY(-5px);
+    border-color: var(--primary-orange);
+    box-shadow: 0 10px 30px rgba(255,107,53,0.2);
+}
+
+:where(.page-about) .capability-icon {
+    font-size: 2.5rem;
+    color: var(--primary-orange);
+    margin-bottom: 15px;
+}
+
+:where(.page-about) .capability-card h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+:where(.page-about) .capability-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+:where(.page-about) .capability-list li {
+    padding: 5px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+:where(.page-about) .capability-list li::before {
+    content: '▸';
+    color: var(--primary-orange);
+    margin-right: 8px;
+}
+
+/* Industries */
+:where(.page-about) .industry-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: var(--light-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+:where(.page-about) .industry-item:hover {
+    background: var(--white);
+    border-color: var(--primary-orange);
+    transform: translateX(10px);
+}
+
+:where(.page-about) .industry-item i {
+    font-size: 2rem;
+    color: var(--primary-orange);
+    margin-right: 15px;
+    min-width: 40px;
+}
+
+:where(.page-about) .industry-item span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+/* Technical Section */
+:where(.page-about) .tech-card {
+    background: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    height: 100%;
+    border-left: 4px solid var(--primary-orange);
+}
+
+:where(.page-about) .tech-card h4 {
+    font-size: 1.4rem;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+:where(.page-about) .tech-card h4 i {
+    color: var(--primary-orange);
+    margin-right: 10px;
+}
+
+:where(.page-about) .tech-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+:where(.page-about) .tech-card ul li {
+    padding: 8px 0;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+}
+
+:where(.page-about) .tech-card ul li:last-child {
+    border-bottom: none;
+}
+
+:where(.page-about) .tech-card ul li strong {
+    color: var(--black);
+}
+
+/* Advantages */
+:where(.page-about) .advantage-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+:where(.page-about) .advantage-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-orange);
+    box-shadow: 0 10px 30px rgba(255,107,53,0.2);
+}
+
+:where(.page-about) .advantage-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-orange);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+:where(.page-about) .advantage-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+:where(.page-about) .advantage-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Leadership Section */
+:where(.page-about) .leadership-section {
+    background: var(--light-gray);
+}
+
+:where(.page-about) .leader-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+:where(.page-about) .leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255,107,53,0.3);
+    border-color: var(--primary-orange);
+}
+
+:where(.page-about) .leader-img-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:where(.page-about) .leader-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white);
+    transition: transform 0.3s ease;
+}
+
+:where(.page-about) .leader-card:hover .leader-img {
+    transform: scale(1.1);
+}
+
+:where(.page-about) .leader-info {
+    padding: 30px;
+    text-align: center;
+}
+
+:where(.page-about) .leader-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+:where(.page-about) .leader-position {
+    font-size: 1rem;
+    color: var(--primary-orange);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+:where(.page-about) .leader-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+:where(.page-about) .leader-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+:where(.page-about) .leader-social a {
+    width: 40px;
+    height: 40px;
+    background: var(--light-gray);
+    color: var(--black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+:where(.page-about) .leader-social a:hover {
+    background: var(--primary-orange);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+:where(.page-about) .footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+:where(.page-about) .footer h5 {
+    color: var(--primary-orange);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+:where(.page-about) .footer p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 10px;
+}
+
+:where(.page-about) .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+:where(.page-about) .footer-links li {
+    margin-bottom: 10px;
+}
+
+:where(.page-about) .footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+:where(.page-about) .footer-links a:hover {
+    color: var(--primary-orange);
+    padding-left: 5px;
+}
+
+:where(.page-about) .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+:where(.page-about) .social-icons a {
+    width: 40px;
+    height: 40px;
+    background: var(--dark-gray);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+:where(.page-about) .social-icons a:hover {
+    background: var(--primary-orange);
+    transform: translateY(-3px);
+}
+
+:where(.page-about) .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+:where(.page-about) .footer-bottom p {
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    :where(.page-about) .hero-title {
+        font-size: 3rem;
+    }
+    
+    :where(.page-about) .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    :where(.page-about) .section-title {
+        font-size: 2rem;
+    }
+    
+    :where(.page-about) .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    :where(.page-about) .mv-card,
+    :where(.page-about) .capability-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    :where(.page-about) .hero-section {
+        height: 400px;
+    }
+    
+    :where(.page-about) .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    :where(.page-about) .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    :where(.page-about) .section-padding {
+        padding: 60px 20px;
+    }
+    
+    :where(.page-about) .section-title {
+        font-size: 1.8rem;
+    }
+    
+    :where(.page-about) .logo-img {
+        height: 40px;
+    }
+    
+    :where(.page-about) .mv-title {
+        font-size: 1.3rem;
+    }
+    
+    :where(.page-about) .overview-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 576px) {
+    :where(.page-about) .hero-section {
+        height: 350px;
+    }
+    
+    :where(.page-about) .hero-title {
+        font-size: 2rem;
+    }
+    
+    :where(.page-about) .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    :where(.page-about) .stat-number {
+        font-size: 2rem;
+    }
+    
+    :where(.page-about) .section-title {
+        font-size: 1.6rem;
+    }
+    
+    :where(.page-about) .mv-card,
+    :where(.page-about) .capability-card,
+    :where(.page-about) .advantage-card {
+        padding: 25px 20px;
+    }
+}
+/* Bigger Image Frame */
+:where(.page-about) .leader-image {
+    position: relative;
+    overflow: hidden;
+    height: 280px; /* Increase height */
+    border-radius: 10px 10px 0 0;
+}
+
+:where(.page-about) .leader-image img {
+    width: 100%;
+    height: 550px; /* Increase image height */
+    object-fit: cover; /* Maintain proper image fit */
+    transition: all 0.3s ease;
+  }
+
+/* Social overlay */
+:where(.page-about) .leader-social {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+:where(.page-about) .leader-image:hover .leader-social {
+    opacity: 1;
+}
+:where(.page-about) .leader-card {
+    height: 550px; /* Increase card height */
+}
+:where(.page-about) .leader-expertise {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}

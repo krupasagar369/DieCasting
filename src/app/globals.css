@@ -1,0 +1,55 @@
+/*
+ * Tailwind CSS v4 (CSS-first). Preflight is intentionally NOT imported: the migrated pages keep the
+ * original Bootstrap 5 + custom stylesheets (src/styles/*) and a global reset would change their look.
+ * Utilities are available for new components (not-found page, helpers).
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+
+/*
+ * Only scan files that really use Tailwind utilities. Scanning everything would generate Tailwind's own
+ * `.collapse { visibility: collapse }` / `.container` utilities from Bootstrap class names and break the layout.
+ */
+@source "../app/not-found.tsx";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* The original sheets set this on <body>; it propagates to the viewport so sticky/fixed elements keep working. */
+body {
+  overflow-x: hidden;
+}
+
+/* The original stylesheets put `overflow-x: hidden` on <body>. On the scoped wrapper that would break
+   position: sticky, so use `clip` (same visual result, no scroll container). */
+.site,
+.industries,
+.splash-page {
+  overflow-x: clip;
+}
+
+/* about.js faded the page in after load */
+.page-fade-in {
+  animation: page-fade-in 0.3s ease 0.05s both;
+}
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* about.js injected this rule at runtime for its scroll-reveal animation */
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* about.js: leader cards were raised on hover */
+.page-about .leader-card:hover {
+  z-index: 10;
+}
