@@ -88,6 +88,9 @@ export default function ContactPage() {
                 <p>
                   Email: <strong>sales@pighalitadhatu.com</strong>
                 </p>
+                <p>
+                  Email: <strong>info@pighalitadhatu.com</strong>
+                </p>
               </div>
               <div className="info-card">
                 <div className="info-icon">

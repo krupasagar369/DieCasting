@@ -1,5 +1,5 @@
 import type { ShellVariant } from "@/types";
-import { SOCIAL_ICONS } from "@/data/site";
+import { SOCIAL_LINKS } from "@/data/site";
 
 function TopBarContent({ variant }: { variant: ShellVariant }) {
   // NOTE: the main-site pages of the original link to tel:+15551234567 / info@diecastingpro.com
@@ -17,9 +17,16 @@ function TopBarContent({ variant }: { variant: ShellVariant }) {
         </a>
       </div>
       <div className="social-links">
-        {SOCIAL_ICONS.map((icon) => (
-          <a key={icon} href="#" className="social-icon" aria-label={icon.split(" ")[1]?.replace("fa-", "")}>
-            <i className={icon}></i>
+        {SOCIAL_LINKS.filter((s) => s.href).map((s) => (
+          <a
+            key={s.label}
+            href={s.href}
+            className="social-icon"
+            aria-label={s.label}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className={s.icon}></i>
           </a>
         ))}
       </div>

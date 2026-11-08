@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BRAND, SOCIAL_ICONS } from "@/data/site";
+import { BRAND, SOCIAL_LINKS } from "@/data/site";
 import type { ShellVariant } from "@/types";
 
 interface FooterProps {
@@ -28,9 +28,16 @@ function Brand() {
 function Social({ className }: { className: string }) {
   return (
     <>
-      {SOCIAL_ICONS.map((icon) => (
-        <a key={icon} href="#" className={className} aria-label={icon.split(" ")[1]?.replace("fa-", "")}>
-          <i className={icon}></i>
+      {SOCIAL_LINKS.filter((s) => s.href).map((s) => (
+        <a
+          key={s.label}
+          href={s.href}
+          className={className}
+          aria-label={s.label}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className={s.icon}></i>
         </a>
       ))}
     </>

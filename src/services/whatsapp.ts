@@ -8,7 +8,7 @@ export interface ContactPayload {
 }
 
 /** Number comes from the original contact.js; override with NEXT_PUBLIC_WHATSAPP_NUMBER (country code, no "+"). */
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "919611059935";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "917899961306";
 
 export function buildWhatsAppUrl(p: ContactPayload): string {
   const phone = `+91 ${p.phone.slice(0, 5)} ${p.phone.slice(5)}`;
